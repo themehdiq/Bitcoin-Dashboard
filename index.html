@@ -23,11 +23,12 @@
     <div class="container">
       <div class="sidebar">
         <i class="fa-solid fa-house"></i>
-        <i class="fa-solid fa-arrow-right-arrow-left"></i>
+        <i class="active fa-solid fa-arrow-right-arrow-left"></i>
         <i class="fa-solid fa-user"></i>
         <i class="fa-solid fa-gears"></i>
       </div>
       <div class="main-content">
+        <!-- START HEADER SECTION -->
         <div class="header">
           <div class="logo">
             <i class="fa-brands fa-bitcoin"></i>
@@ -48,6 +49,57 @@
               ></select>
             </div>
           </div>
+        </div>
+        <!-- END HEADER SECTION -->
+        <h5><span>Welcome Back,</span> Username</h5>
+        <div class="exchange-section">
+          <div class="operations">
+            <div class="operations-links">
+              <a class="active" href="#">BUY</a>
+              <a href="#">SELL</a>
+            </div>
+            <form action="">
+              <label for="currency">Currency</label>
+              <div class="box">
+                <select name="currency" id="currency">
+                  <option value="Bitcoin">Bitcoin</option>
+                  <option value="USD">USD</option>
+                  <option value="EURO">EURO</option>
+                </select>
+                <span>125.00 USD</span>
+              </div>
+              <label for="paym-meth">Payment Method</label>
+              <div class="box">
+                <select name="p-method" id="paym-meth">
+                  <option value="Bank">Bank</option>
+                  <option value="Paypal">Paypal</option>
+                  <option value="Payoneer">Payoneer</option>
+                </select>
+                <span>125.00 USD</span>
+              </div>
+              <label for="amount">Enter Your Amount</label>
+              <div class="box">
+                <input
+                  type="text"
+                  name="amount"
+                  id="amount"
+                  placeholder="Amount..."
+                />
+                <span>125.00 USD</span>
+              </div>
+              <div class="monthly-limit">
+                <span>Monthly Limit</span>
+                <span>$49750 remaining</span>
+              </div>
+              <input type="submit" value="Exchange Now" />
+            </form>
+            <p>
+              Note: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eligendi magnam similique, corrupti quibusdam dignissimos
+              voluptatum quidem cupiditate dolore rerum
+            </p>
+          </div>
+          <div class="resume"></div>
         </div>
       </div>
     </div>

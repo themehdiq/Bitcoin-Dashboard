@@ -12,14 +12,13 @@
 
 body {
     font-family: "Montserrat", sans-serif;
-    color: #645e5e;
+    color: #7b8da7;
 }
 
 .container {
-    padding-top: 40px;
-    padding-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
+    display: flex;
 }
 
 /* Small Screens */
@@ -45,9 +44,9 @@ body {
 
 /* END GLOBAL RULES */
 
-.container {
-    display: flex;
-}
+
+/* START SIDEBAR */
+
 
 .container .sidebar {
     background-color: var(--main-color);
@@ -74,17 +73,24 @@ body {
     -o-border-radius: 3px;
 }
 
-.container .sidebar i:hover {
+
+
+.container .sidebar i:hover,
+.container .sidebar i.active {
     background-color: #1153f9;
     cursor: pointer;
 }
 
+/* END SIDEBAR */
+
+/* START MAIN CONTENT */
 .container .main-content {
     flex-grow: 1;
 }
 
+/* START HEADER */
 .container .main-content .header {
-    padding: 40px;
+    padding: 30px;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid #eee;
@@ -171,3 +177,137 @@ body {
     color: white;
     font-size: 13px;
 }
+
+/* END HEADER */
+
+/* START EXCHANGE SECTION */
+.exchange-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 15px 30px;
+}
+
+.main-content h5 {
+    font-weight: 500;
+    padding: 15px 30px;
+}
+
+.main-content h5 span {
+    color: var(--main-color);
+}
+
+.exchange-section .operations {
+    flex-basis: calc(calc(100% / 2) - 70px);
+}
+
+.exchange-section .operations .operations-links {
+    text-align: center;
+    margin: 20px 0 30px 0;
+}
+
+.exchange-section .operations .operations-links a {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 8px 0;
+    border: 1px solid #f1f1f1;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+}
+
+
+
+.exchange-section .operations .operations-links a.active,
+.exchange-section .operations .operations-links a:hover {
+    background-color: #1652f0;
+    color: white;
+}
+
+.exchange-section .operations form {
+    margin: 20px 0;
+}
+
+.exchange-section .operations form label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.exchange-section .operations form .box {
+    background-color: #d9e1f7b3;
+    margin: 10px 0 20px 0;
+}
+
+.exchange-section .operations form .box select,
+.exchange-section .operations form .box input {
+    border: none;
+    padding: 10px 0 10px 10px;
+    outline: none;
+    color: #5a6779;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    width: 50%;
+    background-color: transparent;
+}
+
+.exchange-section .operations form .box span {
+    padding: 10px 0 10px 10px;
+    color: #5a6779;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.exchange-section .operations form .monthly-limit {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    margin-bottom: 30px;
+}
+
+.exchange-section .operations form .monthly-limit span:first-child {
+    font-weight: 500;
+}
+
+.exchange-section .operations form .monthly-limit span:last-child {
+    color: black;
+}
+
+.exchange-section .operations form input[type="submit"] {
+    width: 100%;
+    padding: 10px 0;
+    color: white;
+    border: none;
+    background-color: #10d876;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.exchange-section .operations p {
+    font-size: 13px;
+}
+
+.exchange-section .resume {
+    flex-basis: calc(calc(100% / 2) - 70px);
+}
+
+/* END EXCHANGE SECTION */
+/* END MAIN CONTENT */

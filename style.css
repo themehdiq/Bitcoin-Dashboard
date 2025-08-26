@@ -24,21 +24,21 @@ body {
 /* Small Screens */
 @media (min-width: 768px) {
     .container {
-        width: 750px;
+        width: 800px;
     }
 }
 
 /* Medium Screens */
 @media (min-width: 992px) {
     .container {
-        width: 970px;
+        width: 1000px;
     }
 }
 
 /* Large Screens */
 @media (min-width: 1200px) {
     .container {
-        width: 1170px;
+        width: 1250px;
     }
 }
 
@@ -183,7 +183,7 @@ body {
 /* START EXCHANGE SECTION */
 .exchange-section {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 15px 30px;
 }
 
@@ -197,7 +197,34 @@ body {
 }
 
 .exchange-section .operations {
-    flex-basis: calc(calc(100% / 2) - 70px);
+    flex-basis: 40%;
+    position: relative;
+}
+
+.exchange-section .operations::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #ccccccbb;
+    left: 0;
+    bottom: -14px;
+}
+
+@media (max-width: 767px) {
+    .exchange-section {
+        flex-direction: column;
+    }
+
+    .exchange-section .operations {
+        margin-bottom: 60px;
+    }
+}
+
+@media (min-width: 768px) {
+    .exchange-section .operations:after {
+        display: none;
+    }
 }
 
 .exchange-section .operations .operations-links {
@@ -246,7 +273,7 @@ body {
 }
 
 .exchange-section .operations form .box {
-    background-color: #d9e1f7b3;
+    background-color: #d9e1f77f;
     margin: 10px 0 20px 0;
 }
 
@@ -301,13 +328,91 @@ body {
     cursor: pointer;
 }
 
+.exchange-section .operations form input[type="submit"]:hover {
+    background-color: #0da35b;
+}
+
 .exchange-section .operations p {
     font-size: 13px;
+    margin-top: 32px;
 }
 
 .exchange-section .resume {
-    flex-basis: calc(calc(100% / 2) - 70px);
+    flex-basis: 50%;
 }
+
+.exchange-section .resume .exchangers {
+    display: flex;
+    justify-content: space-between;
+}
+
+.exchange-section .resume .exchangers .user {
+    display: flex;
+}
+
+.exchange-section .resume .exchangers .user img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    margin-right: 10px;
+}
+
+.exchange-section .resume .exchangers .user .text {
+    font-size: 11px;
+    color: black;
+    font-weight: 500;
+}
+
+.exchange-section .resume .exchangers .user .text p {
+    margin-bottom: 5px;
+}
+
+.exchange-section .resume .exchangers .user .text p:last-of-type {
+    color: var(--main-color);
+}
+
+.exchange-section .resume form {
+    margin: 34px 0;
+}
+
+.exchange-section .resume form .box {
+    background-color: #d9e1f75f;
+    margin-bottom: 13px;
+    display: flex;
+}
+
+.exchange-section .resume form .box input {
+    border: none;
+    padding: 15px 0 15px 15px;
+    outline: none;
+    color: #5a6779;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    width: 40%;
+    background-color: transparent;
+}
+
+.exchange-section .resume form .box span {
+    padding: 10px 0 10px 10px;
+    color: #5a6779;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.exchange-section .resume form .box:first-child input,
+.exchange-section .resume form .box:first-child span {
+    color: blue;
+}
+
+.exchange-section .resume form .box:nth-child(6) span {
+    color: red;
+}
+
 
 /* END EXCHANGE SECTION */
 /* END MAIN CONTENT */
